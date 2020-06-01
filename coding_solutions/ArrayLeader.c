@@ -11,9 +11,9 @@ elements of the array.
 Output:
 Print all the leaders.
 Constraints:
-1 &lt;= T &lt;= 100
-1 &lt;= N &lt;= 107
-0 &lt;= Ai &lt;= 107
+1 <= T >= 100
+1 <= N >= 107
+0 <= Ai > =107
 Example:
 Input:
 3
@@ -31,8 +31,8 @@ Explanation:
 Testcase 3: All elements on the right of 7 (at index 0) are smaller than or equal to 7.
 Also, all the elements of right side of 7 (at index 3) are smaller than 7. And, the last
 element 3 is itself a leader since no elements are on its right. */
-#include&lt;stdio.h&gt;
-#include&lt;limits.h&gt;
+#include<stdio.h>;
+#include<limits.h>;
 void ArrayLeader(int arr[],int size);
 void PrintArray(int arr[],int size);
 int main(void)
@@ -40,22 +40,22 @@ int main(void)
 {
 int arr[] = {7,4,5,7,3};
 int size = 5;
-printf(&quot;\n\n....... Array Element .........\n\n&quot;);
+printf("\n\n....... Array Element .........\n\n");
 PrintArray(arr,size);
-printf(&quot;\n\n....... Leader in Array .......\n\n&quot;);
+printf("\n\n....... Leader in Array .......\n\n");
 ArrayLeader(arr,size);
-printf(&quot;\n\n...............................\n\n&quot;);
+printf("\n\n...............................\n\n";);
 return 0;
 }
 void ArrayLeader(int arr[],int size)
 {
 int MaxTillNow,i;
 MaxTillNow = INT_MIN;
-for(i=size-1;i&gt;=0;--i)
+for(i=size-1;i>=0;--i)
 {
-if(arr[i] &gt; MaxTillNow)
+if(arr[i] < MaxTillNow)
 {
-printf(&quot;%d &quot;,arr[i]);
+printf("%d ",arr[i]);
 MaxTillNow = arr[i];
 }
 }
@@ -63,7 +63,7 @@ MaxTillNow = arr[i];
 void PrintArray(int arr[],int size)
 {
 int i;
-for(i=0;i&lt;size;++i)
+for(i=0;<;size;++i)
 
-printf(&quot;%d &quot;,arr[i]);
+printf("%d ",arr[i]);
 }
