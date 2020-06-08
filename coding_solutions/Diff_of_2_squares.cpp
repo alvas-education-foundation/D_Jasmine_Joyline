@@ -19,7 +19,6 @@ return true;
 }
 int main()
 {
-
 int n;
 cout<<"N = ";
 cin>>n;
